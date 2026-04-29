@@ -1,3 +1,5 @@
 import "./css/style.css";
+import Weather from "./modules/Weather.js";
 
-console.log("Hello, World");
+window.w = Weather;
+console.log(window.w);
