@@ -8,7 +8,10 @@ const Parser = (() => {
       week.push(dayToObject(day));
     }
 
-    return week;
+    return {
+      place: raw["resolvedAddress"],
+      week: week,
+    };
   };
 
   const dayToObject = function(raw) {

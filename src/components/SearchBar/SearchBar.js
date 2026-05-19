@@ -1,12 +1,16 @@
 import "./search-bar.css";
 import Weather from "../../modules/Weather.js";
 import WeekForecast from "../WeekForecast/WeekForecast.js";
+import Title from "../Title/Title.js";
 
 const SearchBar = (() => {
   const PREFIX = "sbar";
+
+  const placeholder = "Insert a location here...";
+
   const raw = `
   <form id="${PREFIX}">
-    <input type="text" id="${PREFIX}-input" name="search">
+    <input type="text" placeholder="${placeholder}" id="${PREFIX}-input" name="search">
     <button>search</button>
   </form>
   `;
@@ -25,7 +29,8 @@ const SearchBar = (() => {
     const response = await Weather.query(obj.search);
 
     if (response) {
-      WeekForecast.update(response);
+      WeekForecast.update(response.week);
+      Title.update(response.place);
     } else {
       // TODO error screen
     }
