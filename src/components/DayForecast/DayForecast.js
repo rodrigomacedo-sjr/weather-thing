@@ -6,7 +6,6 @@ const DayForecast = (() => {
     const PREFIX = "forecard";
     const raw = `
     <div class="${PREFIX}">
-      /*<h1 class="${PREFIX}-weekday">${dayForecast.weekDay}</h1>*/
       <p class="${PREFIX}-date">${dayForecast.date}</p>
 
       <img class="${PREFIX}-img" src="${iconDictionary[dayForecast.icon] ?? iconDictionary["na"]}">
@@ -14,7 +13,7 @@ const DayForecast = (() => {
       <h2 class=${PREFIX}-conditions>${dayForecast.conditions}</h2>
 
       <div class="${PREFIX}-temp-div">
-        <h2 class=${PREFIX}-temp>${dayForecast.temp}</h2>
+        <h2 class=${PREFIX}-temp>${dayForecast.temp} °F</h2>
         <img class=${PREFIX}-thermo src="${iconDictionary["thermometer"]}">
       </div>
 

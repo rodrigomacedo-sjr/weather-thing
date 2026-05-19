@@ -8,11 +8,11 @@ import imgThermometer from "../assets/thermometer.svg";
 import imgNa from "../assets/na.svg";
 
 const iconDictionary = {
-  partlyCloudyDay: imgPartlyCloudyDay,
+  "partly-cloudy-day": imgPartlyCloudyDay,
   rain: imgRain,
-  clearDay: imgClearDay,
-  clearNight: imgClearNight,
-  partlyCloudyNight: imgPartlyCloudyNight,
+  "clear-day": imgClearDay,
+  "clear-night": imgClearNight,
+  "partly-cloudy-night": imgPartlyCloudyNight,
   cloudy: imgCloudy,
   thermometer: imgThermometer,
   na: imgNa,

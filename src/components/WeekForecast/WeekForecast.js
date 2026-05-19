@@ -8,7 +8,6 @@ const WeekForecast = (() => {
     const PREFIX = "week";
     const raw = `
     <div id="${PREFIX}">
-      Children will go here
     </div>
     `;
 
