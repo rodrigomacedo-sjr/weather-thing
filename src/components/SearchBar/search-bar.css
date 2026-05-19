@@ -1,69 +1,68 @@
-@import "../../css/reset.css";
-@import "../../css/theme.css";
-
 #sbar {
   display: flex;
   flex-direction: row;
   gap: 0px;
 
-  width: 40vw;
-  height: 2.2vw;
+  width: 100%;
+  max-width: 600px; 
+  
+  margin: 0 auto;
 
-  background-color: #00000000;
-  border: 0px solid #00000000;
+  background-color: transparent;
+  border: none;
 }
 
 #sbar * {
   margin: 0px;
 }
 
+#sbar input {
+  flex-grow: 9;
+  border-radius: 20px 0px 0px 20px;
+  
+  padding: 12px 20px; 
+  
+  border: 1px solid var(--detail);
+  border-right: none; 
+  
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  outline: none;
+  background-color: #FFFFFF;
+}
+
 #sbar button {
-  border: 0px;
-
-  border-radius: 0px 20px 20px 0px;
   flex-grow: 1;
-
+  border-radius: 0px 20px 20px 0px;
+  border: 1px solid var(--detail);
+  
+  background-color: var(--detail);
+  color: var(--text); 
   font-weight: var(--fw-extrabold);
+  font-size: 1rem;
+  padding: 12px 20px;
+  cursor: pointer;
 
   transform: scale(1);
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  transition: transform 0.1s ease-in-out;
+  
+  transition: opacity 0.3s ease-in-out, transform 0.1s ease-in-out;
 }
 
 #sbar button:hover {
   transform: scale(1.02);
   opacity: 0.9;
-  transition: opacity 0.3s ease-in-out;
-  transition: transform 0.1s ease-in-out;
 }
 
 #sbar button:active {
   transform: scale(1.04);
   opacity: 0.8;
-  transition: opacity 0.3s ease-in-out;
-  transition: transform 0.1s ease-in-out;
-}
-
-#sbar input {
-  border-radius: 20px 0px 0px 20px;
-  flex-grow: 9;
-
-  padding: 5px 10px;
-}
-
-input {
-  border: 1px solid var(--detail);
-}
-
-button {
-  background-color: var(--detail);
-  color: var(--lg-text);
 }
 
 @media only screen and (max-width: 600px) {
   #sbar {
-    width: 80vw;
-    height: 4.4vh;
+    width: 90%; 
+    max-width: none; 
   }
 }

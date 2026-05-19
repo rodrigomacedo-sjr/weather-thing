@@ -1,5 +1,6 @@
 import "./search-bar.css";
 import Weather from "../../modules/Weather.js";
+import WeekForecast from "../WeekForecast/WeekForecast.js";
 
 const SearchBar = (() => {
   const PREFIX = "sbar";
@@ -15,13 +16,19 @@ const SearchBar = (() => {
   const form = parsed.querySelector("form");
   const searchBtn = parsed.querySelector("button");
 
-  searchBtn.addEventListener("click", (event) => {
+  searchBtn.addEventListener("click", async (event) => {
     event.preventDefault();
 
     const data = new FormData(form);
     const obj = Object.fromEntries(data.entries());
 
-    Weather.query(obj.search);
+    const response = await Weather.query(obj.search);
+
+    if (response) {
+      WeekForecast.update(response);
+    } else {
+      // TODO error screen
+    }
 
     form.reset();
   });

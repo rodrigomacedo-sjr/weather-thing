@@ -22,6 +22,10 @@ export default {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(png|jpg|svg)$/i,
+        type: 'asset/resource',
+      }
     ],
   },
   output: {

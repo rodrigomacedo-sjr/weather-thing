@@ -1,5 +1,6 @@
 import Config from "./Config.js";
 import Parser from "./Parser.js";
+import WeekForecast from "../components/WeekForecast/WeekForecast.js";
 
 const Weather = (() => {
   const query = async function(search = "Londrina - PR") {
@@ -11,10 +12,9 @@ const Weather = (() => {
       );
       const data = await raw.json();
 
-      const weather = Parser.responseToObject(data);
+      // TODO start loading
 
-      console.log("weather:");
-      console.log(weather);
+      return Parser.responseToObject(data);
     } catch (err) {
       console.log("error:");
       console.log(err);

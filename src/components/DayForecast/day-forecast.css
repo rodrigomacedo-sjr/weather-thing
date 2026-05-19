@@ -1,0 +1,60 @@
+.forecard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  width: 100%;
+  max-width: 280px; 
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  
+  background-color: #FFFFFF;
+  color: var(--text);
+  border: 2px solid var(--sub);
+  border-radius: 1.5rem;
+}
+
+.forecard-date {
+  font-size: 1.8rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 0.5rem;
+}
+
+.forecard-img {
+  width: 120px;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.forecard-conditions {
+  font-size: 1.1rem;
+  font-weight: var(--fw-regular);
+}
+
+.forecard-temp-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.forecard-temp {
+  font-size: 3rem;
+  font-weight: var(--fw-extrabold);
+  line-height: 1;
+}
+
+.forecard-thermo {
+  width: 40px;
+  height: auto;
+}
+
+.forecard-desc {
+  font-size: 0.95rem;
+  font-weight: var(--fw-light);
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
