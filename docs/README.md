@@ -11,6 +11,6 @@ The goal is to work with asynchronous code using Promisses and `async`/`await`.
 - [x] Display the info on the webpage
 - [x] Display weather icons
 - [x] Add basic styling
-- [ ] Add a not found component
-- [ ] Add a loading component
+- [x] Add a not found component
+- [x] Add a loading component
 - [ ] Publish on GH
