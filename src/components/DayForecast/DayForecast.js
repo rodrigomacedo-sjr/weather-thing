@@ -6,6 +6,7 @@ const DayForecast = (() => {
     const PREFIX = "forecard";
     const raw = `
     <div class="${PREFIX}">
+      <p class="${PREFIX}-day">${dayForecast.dayOfWeek}</p>
       <p class="${PREFIX}-date">${dayForecast.date}</p>
 
       <img class="${PREFIX}-img" src="${iconDictionary[dayForecast.icon] ?? iconDictionary["na"]}">

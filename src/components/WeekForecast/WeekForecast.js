@@ -25,11 +25,20 @@ const WeekForecast = (() => {
     }
   };
 
+  const error = () => {
+    const sad = document.createElement("h1");
+    sad.innerText = ":(";
+    sad.className = "title";
+
+    self.replaceChildren(sad);
+  };
+
   init();
 
   return {
     self,
     update,
+    error,
   };
 })();
 

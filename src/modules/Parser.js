@@ -15,8 +15,10 @@ const Parser = (() => {
   };
 
   const dayToObject = function(raw) {
-    console.log(raw);
+    const date = new Date(raw.datetime.replace("-", "/"));
+    const dayOfWeek = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(date);
     return {
+      dayOfWeek: dayOfWeek,
       date: raw.datetime,
       conditions: raw.conditions ?? "No conditions reported",
       temp: raw.temp ?? "No temperature reported",
